@@ -25,6 +25,9 @@ html { scroll-behavior: smooth; }
 body { font-family: 'Inter', sans-serif; background-color: var(--bg-main); color: var(--text-main); transition: var(--transition); }
 .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
 
+
+
+
 /* Navbar */
 .navbar { position: fixed; top: 0; width: 100%; height: 80px; display: flex; align-items: center; background-color: var(--nav-bg); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border-color); z-index: 1000; }
 .navbar .container { display: flex; justify-content: space-between; align-items: center; width: 100%; }
@@ -35,6 +38,9 @@ body { font-family: 'Inter', sans-serif; background-color: var(--bg-main); color
 .nav-actions { display: flex; align-items: center; gap: 1rem; }
 #theme-toggle { background: var(--card-bg); border: 1px solid var(--border-color); padding: 8px 12px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; }
 
+
+
+
 /* Hero */
 .hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; background: var(--hero-bg); color: var(--hero-text); padding-top: 80px; }
 .hero h1 { font-size: clamp(2.5rem, 8vw, 4rem); font-weight: 800; line-height: 1.1; margin-bottom: 1.5rem; }
@@ -42,15 +48,24 @@ body { font-family: 'Inter', sans-serif; background-color: var(--bg-main); color
 .btn { display: inline-block; background-color: var(--primary-color); color: white; padding: 1rem 2.5rem; border-radius: 50px; font-weight: 600; text-decoration: none; transition: 0.3s; }
 .btn:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3); }
 
+
+
+
+
 /* Sections Common */
 .services, .why-choose-us { padding: 80px 0; }
 .section-title { text-align: center; font-size: 2.5rem; margin-bottom: 3rem; font-weight: 700; }
+
+
 
 /* Services Grid */
 .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
 .service-card { background: var(--card-bg); padding: 2rem; border-radius: 20px; text-align: center; border: 1px solid var(--border-color); transition: 0.3s; }
 .service-card:hover { transform: translateY(-10px); border-color: var(--primary-color); }
 .service-card .icon { font-size: 2.5rem; margin-bottom: 1rem; }
+
+
+
 
 /* Why Choose Us Grid - ISME FIX HAI */
 .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; }
@@ -59,6 +74,9 @@ body { font-family: 'Inter', sans-serif; background-color: var(--bg-main); color
 .feature-icon { font-size: 2rem; background: rgba(37, 99, 235, 0.1); min-width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; border-radius: 10px; }
 .feature-info h3 { font-size: 1.2rem; margin-bottom: 5px; color: var(--primary-color); }
 .feature-info p { font-size: 0.9rem; line-height: 1.5; opacity: 0.8; }
+
+
+
 
 /* --- Footer Styling --- */
 .footer {
@@ -157,6 +175,10 @@ body { font-family: 'Inter', sans-serif; background-color: var(--bg-main); color
     color: var(--primary-color);
     opacity: 1;
 }
+
+
+
+
 /* Mobile Menu */
 .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
 .hamburger span { width: 25px; height: 3px; background: var(--text-main); border-radius: 2px; }

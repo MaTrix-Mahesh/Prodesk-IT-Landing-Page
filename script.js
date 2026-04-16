@@ -1,4 +1,4 @@
-// Theme Toggle Logic
+//Theme Toggle Logic
 const themeToggle = document.getElementById('theme-toggle');
 const body = document.body;
 const icon = themeToggle.querySelector('.mode-icon');
@@ -20,7 +20,7 @@ themeToggle.addEventListener('click', () => {
     }
 });
 
-// Local Storage check
+//Local Storage check
 if (localStorage.getItem('theme') === 'dark') {
     body.setAttribute('data-theme', 'dark');
     icon.textContent = '☀️';
@@ -38,7 +38,7 @@ themeToggle.addEventListener('click', () => {
     }
 });
 
-// Mobile Hamburger Menu
+//Mobile Hamburger Menu
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.querySelector('.nav-links');
 
@@ -54,7 +54,7 @@ document.querySelectorAll('.nav-links a').forEach(link => {
     });
 });
 
-// Sticky Navbar Scroll Effect
+//Sticky Navbar Scroll Effect
 window.addEventListener('scroll', () => {
     const navbar = document.querySelector('.navbar');
     if (window.scrollY > 50) {
