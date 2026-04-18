@@ -22,11 +22,15 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-body { font-family: 'Inter', sans-serif; background-color: var(--bg-main); color: var(--text-main); transition: var(--transition); }
+
+body { 
+    font-family: 'Inter', sans-serif; 
+    background-color: var(--bg-main); 
+    color: var(--text-main); 
+    transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
 .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
-
-
-
 
 /* Navbar */
 .navbar { position: fixed; top: 0; width: 100%; height: 80px; display: flex; align-items: center; background-color: var(--nav-bg); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border-color); z-index: 1000; }
@@ -36,159 +40,40 @@ body { font-family: 'Inter', sans-serif; background-color: var(--bg-main); color
 .nav-links a { text-decoration: none; color: var(--text-main); font-weight: 500; transition: 0.3s; }
 .nav-links a:hover { color: var(--primary-color); }
 .nav-actions { display: flex; align-items: center; gap: 1rem; }
+
 #theme-toggle { background: var(--card-bg); border: 1px solid var(--border-color); padding: 8px 12px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; }
-
-
-
 
 /* Hero */
 .hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; background: var(--hero-bg); color: var(--hero-text); padding-top: 80px; }
 .hero h1 { font-size: clamp(2.5rem, 8vw, 4rem); font-weight: 800; line-height: 1.1; margin-bottom: 1.5rem; }
 .text-gradient { background: linear-gradient(to right, #60a5fa, #2563eb); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 .btn { display: inline-block; background-color: var(--primary-color); color: white; padding: 1rem 2.5rem; border-radius: 50px; font-weight: 600; text-decoration: none; transition: 0.3s; }
-.btn:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3); }
 
-
-
-
-
-/* Sections Common */
+/* Services */
 .services, .why-choose-us { padding: 80px 0; }
 .section-title { text-align: center; font-size: 2.5rem; margin-bottom: 3rem; font-weight: 700; }
-
-
-
-/* Services Grid */
 .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
 .service-card { background: var(--card-bg); padding: 2rem; border-radius: 20px; text-align: center; border: 1px solid var(--border-color); transition: 0.3s; }
-.service-card:hover { transform: translateY(-10px); border-color: var(--primary-color); }
-.service-card .icon { font-size: 2.5rem; margin-bottom: 1rem; }
 
-
-
-
-/* Why Choose Us Grid - ISME FIX HAI */
+/* Features (Why Choose Us) */
 .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; }
-.feature-card { display: flex; align-items: flex-start; gap: 15px; padding: 25px; background: var(--card-bg); border-radius: 15px; border: 1px solid var(--border-color); transition: 0.3s; }
-.feature-card:hover { border-color: var(--primary-color); transform: scale(1.02); }
+.feature-card { display: flex; align-items: flex-start; gap: 15px; padding: 25px; background: var(--card-bg); border-radius: 15px; border: 1px solid var(--border-color); }
 .feature-icon { font-size: 2rem; background: rgba(37, 99, 235, 0.1); min-width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; border-radius: 10px; }
-.feature-info h3 { font-size: 1.2rem; margin-bottom: 5px; color: var(--primary-color); }
-.feature-info p { font-size: 0.9rem; line-height: 1.5; opacity: 0.8; }
 
+/* Footer */
+.footer { background-color: var(--card-bg); padding: 80px 0 30px; border-top: 1px solid var(--border-color); margin-top: 50px; }
+.footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; margin-bottom: 50px; }
+.footer-col h3 { color: var(--text-main); font-size: 1.1rem; margin-bottom: 20px; text-transform: uppercase; }
+.footer-col ul { list-style: none; }
+.footer-col ul li a { color: var(--text-main); text-decoration: none; opacity: 0.7; font-size: 0.9rem; }
+.footer-bottom { display: flex; justify-content: space-between; border-top: 1px solid var(--border-color); padding-top: 30px; }
 
-
-
-/* --- Footer Styling --- */
-.footer {
-    background-color: var(--card-bg);
-    padding: 80px 0 30px;
-    border-top: 1px solid var(--border-color);
-    margin-top: 50px;
-}
-
-.footer-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 40px;
-    margin-bottom: 50px;
-}
-
-.footer-col h2.footer-logo {
-    color: var(--primary-color);
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-}
-
-.footer-col h3 {
-    font-size: 1.1rem;
-    font-weight: 700;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: var(--text-main);
-}
-
-.footer-col ul {
-    list-style: none;
-}
-
-.footer-col ul li {
-    margin-bottom: 12px;
-}
-
-.footer-col ul li a {
-    text-decoration: none;
-    color: var(--text-main);
-    opacity: 0.7;
-    font-size: 0.9rem;
-    transition: 0.3s;
-}
-
-.footer-col ul li a:hover {
-    opacity: 1;
-    color: var(--primary-color);
-    padding-left: 5px;
-}
-
-.address {
-    font-size: 0.9rem;
-    line-height: 1.6;
-    opacity: 0.8;
-    margin-bottom: 15px;
-}
-
-.phone {
-    font-weight: 600;
-    color: var(--primary-color);
-}
-
-/* Footer Bottom */
-.footer-bottom {
-    padding-top: 30px;
-    border-top: 1px solid var(--border-color);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.footer-bottom p {
-    font-size: 0.85rem;
-    opacity: 0.6;
-}
-
-.footer-socials {
-    display: flex;
-    gap: 20px;
-}
-
-.footer-socials a {
-    text-decoration: none;
-    color: var(--text-main);
-    font-size: 0.85rem;
-    opacity: 0.7;
-    transition: 0.3s;
-}
-
-.footer-socials a:hover {
-    color: var(--primary-color);
-    opacity: 1;
-}
-
-
-
-
-/* Mobile Menu */
+/* Hamburger */
 .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
-.hamburger span { width: 25px; height: 3px; background: var(--text-main); border-radius: 2px; }
+.hamburger span { width: 25px; height: 3px; background: var(--text-main); }
 
 @media (max-width: 768px) {
     .hamburger { display: flex; }
     .nav-links { position: fixed; top: 80px; left: -100%; width: 100%; height: 100vh; background: var(--bg-main); flex-direction: column; align-items: center; padding-top: 50px; transition: 0.4s; }
     .nav-links.active { left: 0; }
-    .footer-bottom {
-        flex-direction: column;
-        text-align: center;
-    }
 }
